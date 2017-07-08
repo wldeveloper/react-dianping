@@ -2,14 +2,13 @@
 * @Author: Wu Lei
 * @Date:   2017-06-11
 * @Last Modified by:   Wu Lei
-* @Last Modified time: 2017-06-11
+* @Last Modified time: 2017-07-08
 */
 import { combineReducers } from 'redux'
-
-const initState = (state = 'xxx', action) => {
-    return state;
-}
+import userinfoReducers from './userinfo'
+import store from './store'
 
 export default combineReducers({
-    initState
+    ...userinfoReducers,
+    ...store
 })
